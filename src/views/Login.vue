@@ -12,7 +12,7 @@
           >
             <b-form-input
               id="input-1"
-              v-model="text"
+              v-model="username"
               type="text"
               required
             ></b-form-input>
@@ -27,7 +27,7 @@
             ></b-form-input>
           </b-form-group>
           <br />
-          <b-button block pill type="submit" class='login-btn' to='/main'>
+          <b-button block pill type="submit" class='login-btn'>
             <strong class="site-login-btn-text">Login</strong>
           </b-button>
         </b-form>
@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       username: "",
-      password: ""
+      password: "",
     };
   },
   methods: {

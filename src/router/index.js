@@ -44,6 +44,12 @@ const routes = [
 		component: loadView('About'),
 		meta: { title: 'About | Meep', authwall: false }
 	},
+	{
+		path: '/leagues',
+		name: 'Leagues',
+		component: loadView('Leagues'),
+		meta: { title: 'Your Leagues | Meep', authwall: true }
+	},
 ];
 
 const router = new VueRouter({

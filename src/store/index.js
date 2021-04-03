@@ -31,7 +31,7 @@ export default new Vuex.Store({
 			// eslint-disable-next-line
 			return new Promise((resolve, reject) => {
 				API.post('/login/', {
-					Username: usercredentials.Username,
+					username: usercredentials.username,
 					password: usercredentials.password
 				})
 					.then(response => {
@@ -43,6 +43,10 @@ export default new Vuex.Store({
 						localStorage.setItem(
 							'refreshToken',
 							response.data.tokens.refresh
+						);
+						localStorage.setItem(
+							'auth',
+							this.authenticated
 						);
 						resolve(true);
 					})

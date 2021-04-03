@@ -11,7 +11,7 @@
             <ul class="navbar-nav">
                 
                 <li class="nav-item">
-                    <b-button class="b-btn" to='/'><a class="nav-link">Home</a></b-button>
+                    <b-button class="b-btn" to='/main'><a class="nav-link">Leagues</a></b-button>
                 </li>
                 <li class="nav-item">
                     <b-button class="b-btn" to='/user/register'><a class="nav-link">Sign Up</a></b-button>
@@ -27,6 +27,18 @@
     </nav>
   </div>
 </template>
+
+<script>
+// import store from '../store/index';
+export default {
+  data() {
+    return {
+      auth:localStorage.getItem('auth')
+    };
+  },
+}
+</script>
+
 
 <style scoped>
 
