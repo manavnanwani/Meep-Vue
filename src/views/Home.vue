@@ -17,7 +17,6 @@
                 </div>
             </div>
         </div>
-
     </section>
   </div>
 </template>
@@ -45,9 +44,6 @@ export default {
   justify-content: center;
   margin-top: 30px;
   margin-left: 37px;
-}
-.login-btn{
-  
 }
 .btn-light {
   background: #ffffff;

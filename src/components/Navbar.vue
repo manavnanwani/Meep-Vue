@@ -28,9 +28,7 @@
 </template>
 
 <style scoped>
-.navbar{
-  padding: 0 100px;
-}
+
 .navbar-nav .nav-item {
   padding-left: 5rem;
 }
