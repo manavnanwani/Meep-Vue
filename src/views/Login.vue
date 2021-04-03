@@ -2,8 +2,8 @@
   <b-container>
     <b-row alogn-v="center" align-h="center" class="mt-md-5">
       <b-col cols="11" md="5" class="site-login-main mt-md-5">
-        <h3 class="text-white text-center site-login">Login</h3>
-        <b-form @submit="onSubmit" class="pb-2 text-white site-login-form">
+        <b-form @submit="onSubmit" class="text-white site-login-form">
+          <h3 class="text-white text-center site-login">Login</h3>
           <b-form-group
             id="input-group-1"
             label="Username"
@@ -27,7 +27,7 @@
             ></b-form-input>
           </b-form-group>
           <br />
-          <b-button block pill type="submit" variant="moz-orange">
+          <b-button block pill type="submit" class='login-btn' to='/main'>
             <strong class="site-login-btn-text">Login</strong>
           </b-button>
         </b-form>
@@ -65,7 +65,7 @@ export default {
 
 <style scoped>
 .site-login-main {
-  background-color: rgba(128, 179, 240, 0.26);
+  background-color: rgba(128, 179, 240, 0.40);
   border-radius: 10px;
 }
 .site-login-logo {
@@ -81,13 +81,12 @@ export default {
 }
 .site-login {
   position: relative;
-  top: -40px;
 }
 .site-login-form {
   position: relative;
-  top: -3%;
   width: 100%;
   left: 0%;
+  padding: 30px 0;
 }
 .site-login-fp {
   cursor: pointer;
@@ -101,11 +100,14 @@ body {
 }
 input,
 input:focus {
-  background: #06192d;
+  background: #7a00da;
   color: white;
   border: 1px solid white;
   border-radius: 15px;
   height: 2.75rem;
+}
+.login-btn{
+  background: black;
 }
 .form-group,
 label {

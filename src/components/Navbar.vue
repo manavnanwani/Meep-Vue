@@ -9,17 +9,18 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <div class="mr-auto"></div>
             <ul class="navbar-nav">
+                
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <b-button class="b-btn" to='/'><a class="nav-link">Home</a></b-button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sign Up</a>
+                    <b-button class="b-btn" to='/user/register'><a class="nav-link">Sign Up</a></b-button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user/login">Login</a>
+                    <b-button class="b-btn" to='/user/login'><a class="nav-link">Login</a></b-button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <b-button class="b-btn" to='/about'><a class="nav-link">About</a></b-button>
                 </li>
             </ul>
         </div>
@@ -37,5 +38,13 @@
   font-size: 17px;
   line-height: 36px;
   color: black !important;
+}
+.b-btn{
+  background: transparent !important;
+  outline: none !important;
+  border: none !important;
+}
+.b-btn:hover{
+  background: transparent;
 }
 </style>

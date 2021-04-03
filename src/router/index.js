@@ -38,6 +38,12 @@ const routes = [
 		component: loadView('Main'),
 		meta: { title: 'MainPage | Meep', authwall: true }
 	},
+	{
+		path: '/about',
+		name: 'About',
+		component: loadView('About'),
+		meta: { title: 'About | Meep', authwall: false }
+	},
 ];
 
 const router = new VueRouter({
