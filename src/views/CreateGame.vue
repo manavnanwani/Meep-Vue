@@ -115,6 +115,7 @@ export default {
             .then(({ data, status }) => {
                 if (status === 201) {
                     resolve(true);
+                    this.$router.push({ name: "Games" })
                 }
             })
             .catch(error => {

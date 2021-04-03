@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-light ">
-        <a class="navbar-brand" href="#"> <img src="../assets/logo.svg" alt="logo"> </a>
+        <a class="navbar-brand" href="http://localhost:8080"> <img src="../assets/logo.svg" alt="logo"> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -11,7 +11,7 @@
             <ul class="navbar-nav">
                 
                 <li class="nav-item">
-                    <b-button class="b-btn" to='/main'><a class="nav-link">Leagues</a></b-button>
+                    <b-button class="b-btn" to='/leagues'><a class="nav-link">Leagues</a></b-button>
                 </li>
                 <li class="nav-item">
                     <b-button class="b-btn" to='/about'><a class="nav-link">About</a></b-button>

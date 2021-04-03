@@ -72,7 +72,6 @@ export default {
       this.$store
         .dispatch("createLeague", {
           name: this.name,
-          file1: this.file1,
           desc: this.desc,
         })
         .then(() => {

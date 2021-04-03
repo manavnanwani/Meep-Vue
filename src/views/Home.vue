@@ -7,9 +7,15 @@
                     <div>
                         <img src="../assets/landing.svg">
                     </div>
-                    <b-button size="lg" to="/user/login" class="landing__btn mt-5">
-                      <div class="login-btn">Login</div>
-                    </b-button>
+                    <div class="d-flex">
+                      <b-button size="lg" to="/user/login" class="landing__btn mt-5">
+                        <div class="login-btn">Login</div>
+                      </b-button>
+                      <b-button size="lg" to="/user/register" class="landing__btn mt-5">
+                        <div class="login-btn">Register</div>
+                      </b-button>
+                    </div>
+                    
                 </div>
 
                 <div class="col-md-6">
@@ -33,7 +39,7 @@ export default {
 
 <style scoped>
 .landing__btn {
-  max-width: 321px;
+  max-width: 150px;
   background: #ffffff;
   color: black;
   box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.25);

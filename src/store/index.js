@@ -116,7 +116,6 @@ export default new Vuex.Store({
 			return new Promise((resolve, reject) => {
 				getAPI.post('/league/league-create/', {
 					name: usercredentials.name,
-					league_pic: usercredentials.file1,
 					description: usercredentials.desc,
 				})
 					// eslint-disable-next-line

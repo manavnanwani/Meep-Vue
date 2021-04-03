@@ -62,7 +62,7 @@ export default {
             .then(response => {
             this.games = response.data;
             console.log(this.games)
-            localStorage.setItem('league-number',this.games[0].league);
+            localStorage.setItem('league-number',this.id);
             resolve(true);
             })
             .catch(error => {

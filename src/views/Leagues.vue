@@ -29,13 +29,14 @@
     <div class="row row-cols-1 row-cols-md-3">
         <div v-for="item in this.leagues" :key="item.id" class="col mb-4">
             <div class="card">
-            <img src="https://picsum.photos/600/300/" class="card-img-top" alt="">
+            <img src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="">
             <div class="card-body">
                 <h4 class="card-title">{{item.name}}</h4>
                 <p class="card-text">{{item.description}}</p>
                 <b-button block pill type="submit" class='login-btn' :to="`league-detail/${item.id}`">
                     <strong class="site-login-btn-text">Open</strong>
                 </b-button>
+                <p class="card-text mt-3 text-center">League Code : {{item.code}}</p>
             </div>
             </div>
         </div>
