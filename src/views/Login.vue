@@ -100,9 +100,9 @@ body {
 }
 input,
 input:focus {
-  background: #7a00da;
-  color: white;
-  border: 1px solid white;
+  background: white;
+  color: black;
+  border: 1px solid black;
   border-radius: 15px;
   height: 2.75rem;
 }

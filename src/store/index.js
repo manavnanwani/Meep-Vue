@@ -2,17 +2,17 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import { API } from './axios';
-// import axios from 'axios';
+import axios from 'axios';
 
 Vue.use(Vuex);
 
-// var getAPI = axios.create({
-// 	baseURL: '',
-// 	timeout: 3000,
-// 	headers: {
-// 		Authorization: 'Bearer ' + localStorage.getItem('accessToken')
-// 	}
-// });
+var getAPI = axios.create({
+	baseURL: 'http://127.0.0.1:8000/',
+	timeout: 3000,
+	headers: {
+		Authorization: 'Bearer ' + localStorage.getItem('accessToken')
+	}
+});
 
 export default new Vuex.Store({
 	state: {
@@ -85,7 +85,85 @@ export default new Vuex.Store({
 						} else reject(error.response.data.message);
 					});
 			});
-		}
+		},
+		
+		joinLeague(context, usercredentials) {
+			return new Promise((resolve, reject) => {
+				getAPI.post('/league/league-join/', {
+					code: usercredentials.code,
+				})
+					// eslint-disable-next-line
+					.then(({ data, status }) => {
+						if (status === 201) {
+							resolve(true);
+						}
+					})
+					.catch(error => {
+						if (error.response.status === 400) {
+							reject(
+								new Error(
+									'Error while joining League'
+								),
+								null
+							);
+						} else reject(error.response.data.message);
+					});
+			});
+		},
+
+
+		createLeague(context, usercredentials) {
+			return new Promise((resolve, reject) => {
+				getAPI.post('/league/league-create/', {
+					name: usercredentials.name,
+					league_pic: usercredentials.file1,
+					description: usercredentials.desc,
+				})
+					// eslint-disable-next-line
+					.then(({ data, status }) => {
+						if (status === 201) {
+							resolve(true);
+						}
+					})
+					.catch(error => {
+						if (error.response.status === 400) {
+							reject(
+								new Error(
+									'Error while creating League'
+								),
+								null
+							);
+						} else reject(error.response.data.message);
+					});
+			});
+		},
+
+		createGame(context, usercredentials) {
+			return new Promise((resolve, reject) => {
+				getAPI.post(`/league/league-detail/${this.$route.params.id}/game-create/`, {
+					name: usercredentials.name,
+					capacity: usercredentials.cap,
+					bet: usercredentials.bet,
+					description: usercredentials.desc,
+				})
+					// eslint-disable-next-line
+					.then(({ data, status }) => {
+						if (status === 201) {
+							resolve(true);
+						}
+					})
+					.catch(error => {
+						if (error.response.status === 400) {
+							reject(
+								new Error(
+									'Error while creating Game'
+								),
+								null
+							);
+						} else reject(error.response.data.message);
+					});
+			});
+		},
 	},
 	modules: {}
 });

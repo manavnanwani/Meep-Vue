@@ -50,6 +50,30 @@ const routes = [
 		component: loadView('Leagues'),
 		meta: { title: 'Your Leagues | Meep', authwall: true }
 	},
+	{
+		path: '/create',
+		name: 'CreateLeague',
+		component: loadView('CreateLeague'),
+		meta: { title: 'Create League | Meep', authwall: true }
+	},
+	{
+		path: '/join',
+		name: 'JoinLeague',
+		component: loadView('JoinLeague'),
+		meta: { title: 'Join League | Meep', authwall: true }
+	},
+	{
+		path: '/league-detail/:id',
+		name: 'Games',
+		component: loadView('Games'),
+		meta: { title: 'Games | Meep', authwall: true }
+	},
+	{
+		path: '/createGame',
+		name: 'CreateGame',
+		component: loadView('CreateGame'),
+		meta: { title: 'Create Game | Meep', authwall: true }
+	},
 ];
 
 const router = new VueRouter({

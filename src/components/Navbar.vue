@@ -14,12 +14,6 @@
                     <b-button class="b-btn" to='/main'><a class="nav-link">Leagues</a></b-button>
                 </li>
                 <li class="nav-item">
-                    <b-button class="b-btn" to='/user/register'><a class="nav-link">Sign Up</a></b-button>
-                </li>
-                <li class="nav-item">
-                    <b-button class="b-btn" to='/user/login'><a class="nav-link">Login</a></b-button>
-                </li>
-                <li class="nav-item">
                     <b-button class="b-btn" to='/about'><a class="nav-link">About</a></b-button>
                 </li>
             </ul>
